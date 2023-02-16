@@ -1,28 +1,27 @@
 <template>
   <div class="app">
-    <Layout/>
-
+    <Layout />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import Layout from './components/Layout.vue'
-  export default{
-    components:{
-      Layout
-    }
-  }
-  
-
+import Layout from './components/Layout.vue'
+export default {
+  name: 'App',
+  components: {
+    Layout,
+  },
+};
 </script>
 
 <style>
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-body{
+body {
   font-family: 'Gloria Hallelujah', cursive;
 }
 </style>
