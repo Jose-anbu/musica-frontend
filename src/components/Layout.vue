@@ -32,5 +32,12 @@ nav{
     color: #00bf63;
     text-shadow: 0px 0px 10px white;
     align-items: center;
+    transition: 400ms;
+}
+
+.texto__nav:hover{
+    color: lightgreen;
+    cursor: pointer;
+    transform: scale(1.10);
 }
 </style>
