@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <Layout />
-    <router-view></router-view>
+    <router-view class="px-5 py-5"></router-view>
   </div>
 </template>
 
