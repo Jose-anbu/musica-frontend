@@ -21,7 +21,7 @@ export default {
   margin: 0;
 }
 
-/* body {
+body {
   font-family: 'Gloria Hallelujah', cursive;
-} */
+}
 </style>

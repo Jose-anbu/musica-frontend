@@ -2,7 +2,7 @@
   <div>
     <h1>Artistas ({{ ListaArtistas.length }})</h1>
     <div>
-      <div class="lista d-flex justify-content-between my-5 col-lg-12">
+      <div class="lista d-flex justify-content-between my-5">
         <ArtistaCard v-for="artista in ListaArtistas" 
         :id="artista.id"
         :nombre="artista.nombre"
@@ -11,7 +11,7 @@
         :biografia="artista.biografia"
         :imagen="artista.imagen"
         :canciones="artista.canciones"
-        class="artistaCard mx-5"/>
+        class="artistaCard"/>
       </div>
     </div>
   </div>
@@ -47,13 +47,14 @@ export default {
 </script>
 
 <style>
-/* .lista{
+.lista{
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
-} */
+  /* margin: 20px 0; */
+}
 
 .artistaCard {
-  width: 33%;
+  width: 30%;
+  text-align: center;
 }
 </style>
