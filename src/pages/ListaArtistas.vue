@@ -1,35 +1,59 @@
 <template>
   <div>
-    <h1>Artistas ({{ artistas.length }})</h1>
+    <h1>Artistas ({{ ListaArtistas.length }})</h1>
     <div>
-      <ArtistaCard/>
+      <div class="lista d-flex justify-content-between my-5 col-lg-12">
+        <ArtistaCard v-for="artista in ListaArtistas" 
+        :id="artista.id"
+        :nombre="artista.nombre"
+        :genero="artista.genero"
+        :pais="artista.pais"
+        :biografia="artista.biografia"
+        :imagen="artista.imagen"
+        :canciones="artista.canciones"
+        class="artistaCard mx-5"/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import ArtistaCard from '../components/ArtistaCard.vue'
-import axios from 'axios'
+import endpoints from '../endpoints'
 
 export default {
-  components:{
+  components: {
     ArtistaCard
   },
   name: 'ListaArtistas',
   data() {
     return {
-      cantidad: 0,
-      artistas: []
+      ListaArtistas: [],
     }
   },
-  created(){
-    axios.get('http://localhost:5000/artistas/').then((lista)=>{
-      this.artistas=lista.data
+  created() {
+    this.getListaArtistas(0)?.then(() => {
+      console.log('Lista obtenida')
     })
+  },
+  methods: {
+    getListaArtistas(offset) {
+      endpoints.getListaArtistas(offset).then((lista) => {
+        return this.ListaArtistas = lista.data
+      })
+    }
   }
 }
 </script>
 
 <style>
+/* .lista{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+} */
 
+.artistaCard {
+  width: 33%;
+}
 </style>
