@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <p>Tarjeta de Artista</p> -->
-    <div class="card">
+    <div class="card" @click="irADetalleArtista">
       <div class="contenedor__card">
         <img :src='imagen' :alt='nombre' class="card-img-top">
       </div>
@@ -15,7 +15,12 @@
 <script>
 export default {
   name:'ArtistaCard',
-  props:['id','nombre','genero','pais','biografia','imagen','canciones']
+  props:['id','nombre','genero','pais','biografia','imagen','canciones'],
+  methods:{
+    irADetalleArtista(){
+      this.$router.push({name: 'artista', params: {id:this.id}})
+    }
+  }
 }
 </script>
 
