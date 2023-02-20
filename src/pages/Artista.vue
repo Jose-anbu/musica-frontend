@@ -81,14 +81,25 @@ export default {
   list-style: circle;
 }
 
+.seccionCanciones ul {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .seccionCanciones li {
   margin-bottom: 10px;
-  list-style: inside;
   list-style-type: none;
+  text-align: center;
+  transition: 400ms;
 }
 
 .seccionCanciones li:hover{
   cursor: pointer;
-  transform: scale(1.01);
+  transform: scale(1.05);
+  box-shadow: 5px 10px 20px grey;
+  background-color: #212529;
+  color: #ffffff;
+  border-radius: 7px;
+  padding: 7px;
 }
 </style>

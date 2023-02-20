@@ -2,15 +2,19 @@
   <div class="app">
     <Header></Header>
     <router-view class="px-5 py-5 margenPages"></router-view>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Footer
   },
 };
 </script>
@@ -26,6 +30,6 @@ body {
 }
 
 .margenPages {
-  margin-top: 67.08px;
+  margin: 67.08px 0 104px;
 }
 </style>
