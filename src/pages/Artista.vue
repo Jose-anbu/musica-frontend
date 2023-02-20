@@ -16,7 +16,7 @@
     <div class="seccionCanciones">
       <h3 class="py-4">Canciones</h3>
       <ul>
-        <li v-for="cancion in canciones">{{ cancion.nombre }}</li>
+        <li v-for="(cancion, index) in canciones" @click=irADetalleCancion(index)>{{ cancion.nombre }}</li>
       </ul>
     </div>
   </div>
@@ -49,13 +49,20 @@ export default {
     })
   },
   computed: {
-    nombreArtista() {
-      return this.artista.nombre
-    },
     imagenArtista() {
       return this.artista.imagen
+    },
+    nombreArtista() {
+      return 'Imagen de',this.artista.nombre
     }
   },
+  methods:{
+    irADetalleCancion(index){
+      console.log(index)
+      console.log(this.artista.canciones[index])
+      this.$router.push({name: 'cancion', params: {id:this.artista.canciones[index]}})
+    }
+  }
 }
 </script>
 
@@ -78,5 +85,10 @@ export default {
   margin-bottom: 10px;
   list-style: inside;
   list-style-type: none;
+}
+
+.seccionCanciones li:hover{
+  cursor: pointer;
+  transform: scale(1.01);
 }
 </style>

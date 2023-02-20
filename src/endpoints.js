@@ -17,4 +17,8 @@ export default {
     }
     return canciones;
   },
+  async getDetalleCancion(id){
+    let cancion=await axios.get(`http://localhost:5000/canciones/${id}`)
+    return cancion.data
+  }
 };
