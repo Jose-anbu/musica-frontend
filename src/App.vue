@@ -1,16 +1,16 @@
 <template>
   <div class="app">
-    <Layout />
-    <router-view class="px-5 py-5"></router-view>
+    <Header></Header>
+    <router-view class="px-5 py-5 margenPages"></router-view>
   </div>
 </template>
 
 <script>
-import Layout from './components/Layout.vue'
+import Header from './components/Header.vue'
 export default {
   name: 'App',
   components: {
-    Layout,
+    Header
   },
 };
 </script>
@@ -23,5 +23,9 @@ export default {
 
 body {
   font-family: 'Gloria Hallelujah', cursive;
+}
+
+.margenPages {
+  margin-top: 67.08px;
 }
 </style>
