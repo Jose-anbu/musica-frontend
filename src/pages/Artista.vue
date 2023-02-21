@@ -39,7 +39,6 @@ export default {
     endpoints.getArtista(this.id).then((artista) => {
       this.artista = artista
       endpoints.getCancionesArtista(this.artista.canciones)?.then((canciones_) => {
-        console.log(canciones_)
         this.canciones = canciones_
       })
       return {
@@ -53,14 +52,12 @@ export default {
       return this.artista.imagen
     },
     nombreArtista() {
-      return 'Imagen de',this.artista.nombre
+      return 'Imagen de', this.artista.nombre
     }
   },
-  methods:{
-    irADetalleCancion(index){
-      console.log(index)
-      console.log(this.artista.canciones[index])
-      this.$router.push({name: 'cancion', params: {id:this.artista.canciones[index]}})
+  methods: {
+    irADetalleCancion(index) {
+      this.$router.push({ name: 'cancion', params: { id: this.artista.canciones[index] } })
     }
   }
 }
@@ -93,7 +90,7 @@ export default {
   transition: 400ms;
 }
 
-.seccionCanciones li:hover{
+.seccionCanciones li:hover {
   cursor: pointer;
   transform: scale(1.05);
   box-shadow: 5px 10px 20px grey;

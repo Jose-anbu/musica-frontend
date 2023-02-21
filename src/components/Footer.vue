@@ -1,8 +1,8 @@
 <template>
     <div class="bg-dark text-light contenedorFooter pt-3 fixed-bottom">
         <div>
-            <a href="https://www.linkedin.com/in/joseantonioburgos/" target="_blank" title="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn" class="icono"></a>
-            <a href="https://github.com/Jose-anbu" class="mx-3" target="_blank" title="GitHub"><img src="https://cdn-icons-png.flaticon.com/512/3291/3291695.png" alt="GitHub" class="icono"></a>
+            <a href="https://www.linkedin.com/in/joseantonioburgos/" class="me-2" target="_blank" title="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn" class="icono"></a>
+            <a href="https://github.com/Jose-anbu" class="ms-2" target="_blank" title="GitHub"><img src="https://cdn-icons-png.flaticon.com/512/3291/3291695.png" alt="GitHub" class="icono"></a>
         </div>
         <p class="pt-2">&copy; Todos los derechos reservados - José Antonio Burgos - 2023</p>
     </div>

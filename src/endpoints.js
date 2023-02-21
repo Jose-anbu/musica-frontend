@@ -17,26 +17,25 @@ export default {
     }
     return canciones;
   },
-  async getDetalleCancion(id){
-    let cancion=await axios.get(`http://localhost:5000/canciones/${id}`)
-    return cancion.data
+  async getDetalleCancion(id) {
+    let cancion = await axios.get(`http://localhost:5000/canciones/${id}`);
+    return cancion.data;
   },
-  async getCancionesMismosAlbum(id){
-    let listaArtistas=await this.getListaArtistas(0)
-    listaArtistas=listaArtistas.data
-    let longitudListaArtistas=0
-    let longitudListaCanciones=0
-    longitudListaArtistas=listaArtistas.length
+  async getListaCancionesArtista(id) {
+    let listaArtistas = await this.getListaArtistas(0);
+    listaArtistas = listaArtistas.data;
+    let longitudListaArtistas = 0;
+    let longitudListaCanciones = 0;
+    let indiceArtista = 0;
 
-    for(let i=0;i<longitudListaArtistas;i++){
-      longitudListaCanciones=await listaArtistas[i].canciones.length
-      for(let j=0;j<longitudListaCanciones;j++){
+    longitudListaArtistas = listaArtistas.length;
 
-        console.log(listaArtistas[i].nombre,': ',listaArtistas[i].canciones[j])
-        
-        if(listaArtistas[i].canciones[j]===id){
-          console.log('Este id es igual a: ' + id)
-          return listaArtistas[i].canciones
+    for (let i = 0; i < longitudListaArtistas; i++) {
+      longitudListaCanciones = await listaArtistas[i].canciones.length;
+      for (let j = 0; j < longitudListaCanciones; j++) {
+        if (listaArtistas[i].canciones[j] === id) {
+          indiceArtista = i;
+          return listaArtistas[i].canciones;
         }
       }
     }
