@@ -20,5 +20,25 @@ export default {
   async getDetalleCancion(id){
     let cancion=await axios.get(`http://localhost:5000/canciones/${id}`)
     return cancion.data
+  },
+  async getCancionesMismosAlbum(id){
+    let listaArtistas=await this.getListaArtistas(0)
+    listaArtistas=listaArtistas.data
+    let longitudListaArtistas=0
+    let longitudListaCanciones=0
+    longitudListaArtistas=listaArtistas.length
+
+    for(let i=0;i<longitudListaArtistas;i++){
+      longitudListaCanciones=await listaArtistas[i].canciones.length
+      for(let j=0;j<longitudListaCanciones;j++){
+
+        console.log(listaArtistas[i].nombre,': ',listaArtistas[i].canciones[j])
+        
+        if(listaArtistas[i].canciones[j]===id){
+          console.log('Este id es igual a: ' + id)
+          return listaArtistas[i].canciones
+        }
+      }
+    }
   }
 };
