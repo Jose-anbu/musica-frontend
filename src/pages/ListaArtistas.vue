@@ -33,7 +33,6 @@ export default {
   },
   created() {
     this.getListaArtistas(0)?.then(() => {
-      console.log('Lista obtenida')
     })
   },
   methods: {
@@ -50,7 +49,6 @@ export default {
 .lista{
   display: flex;
   justify-content: space-between;
-  /* margin: 20px 0; */
 }
 
 .artistaCard {

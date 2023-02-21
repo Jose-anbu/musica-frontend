@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <p>Tarjeta de Artista</p> -->
     <div class="card" @click="irADetalleArtista">
       <div class="contenedor__card">
         <img :src='imagen' :alt='nombre' class="card-img-top">
@@ -40,10 +39,4 @@ export default {
   height: 200px;
   overflow: hidden;
 }
-
-/* .contenedor__card img{
-  width: 100%;
-  height: auto;
-} */
-
 </style>

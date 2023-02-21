@@ -9,12 +9,6 @@
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style>
 nav {
   box-shadow: 5px 10px 20px grey;
