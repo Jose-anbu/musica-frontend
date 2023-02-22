@@ -13,30 +13,42 @@
 
 <script>
 export default {
-  name:'ArtistaCard',
-  props:['id','nombre','genero','pais','biografia','imagen','canciones'],
-  methods:{
-    irADetalleArtista(){
-      this.$router.push({name: 'artista', params: {id:this.id}})
+  name: 'ArtistaCard',
+  props: ['id', 'nombre', 'genero', 'pais', 'biografia', 'imagen', 'canciones'],
+  methods: {
+    irADetalleArtista() {
+      this.$router.push({ name: 'artista', params: { id: this.id } })
     }
   }
 }
 </script>
 
 <style>
-.card{
+.card {
   transition: 400ms;
 }
 
-.card:hover{
+.card:hover {
   cursor: pointer;
   transform: scale(1.01);
   box-shadow: 5px 10px 20px grey;
 }
 
-.contenedor__card{
+.contenedor__card {
   width: auto;
   height: 200px;
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .contenedor__card {
+    height: 184px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contenedor__card {
+    height: 133px;
+  }
 }
 </style>

@@ -32,4 +32,22 @@ body {
 .margenPages {
   margin: 67.08px 0 104px;
 }
+
+@media screen and (max-width: 767px){
+  .margenPages {
+    margin: 40px 0 77px;
+  }
+  h1{
+    font-size: 25px;
+  }
+  h3{
+    font-size: 18px;
+  }
+  h4{
+    font-size: 15px;
+  }
+  li{
+    font-size: 13px;
+  }
+}
 </style>

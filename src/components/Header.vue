@@ -17,6 +17,7 @@ nav {
 nav .texto__nav:visited {
   color: #00bf63;
 }
+
 .imagenLogo__nav {
   width: 8%;
 }
@@ -33,5 +34,23 @@ nav .texto__nav:visited {
   color: lightgreen;
   cursor: pointer;
   transform: scale(1.10);
+}
+
+@media screen and (min-width: 768px) {
+  nav .texto__nav {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .imagenLogo__nav {
+    width: 5%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  nav .texto__nav {
+    font-size: 18px;
+  }
 }
 </style>
