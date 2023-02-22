@@ -14,6 +14,9 @@ nav {
   box-shadow: 5px 10px 20px grey;
 }
 
+nav .texto__nav:visited {
+  color: #00bf63;
+}
 .imagenLogo__nav {
   width: 8%;
 }
