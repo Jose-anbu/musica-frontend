@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+# PROYECTO FINAL Desarrollado en Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+El proyecto se ha desarrollado aplicando HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, VUE, VITE y NODE, así como, el sistema de control de versiones GIT. El código del proyecto cuenta de 2 partes:
 
-## Recommended IDE Setup
+- [musica-frontend](https://github.com/Jose-anbu/musica-frontend)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [musica-backend](https://github.com/Jose-anbu/musica-backend)
+
+Ambos alojados en GitHub.
+
+Responsivo, mediante el uso de media queries, por lo tanto, se adapta a cualquier dispositivo.
+
+Gracias por tomarte el tiempo de leerme, si puedes darme un feedback te lo agradeceré 😄&#128077;&#127995;
